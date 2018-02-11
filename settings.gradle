@@ -1,0 +1,4 @@
+rootProject.name = 'simple-authentication'
+
+include 'simple-authentication-server'
+include 'simple-authentication-distribution'

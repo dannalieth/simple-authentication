@@ -1,0 +1,50 @@
+// =======
+// Plugins
+// =======
+apply from: "$rootDir/gradle/repositories.gradle"
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+mainClassName = "com.simple.authentication.SimpleAuthenticationApplication"
+
+// ============
+// Dependencies
+// ============
+dependencies {
+    runtime project(':simple-authentication-server')
+}
+
+tasks.getByName("distZip") {
+
+}
+
+distributions {
+    main {
+        contents {
+            into ('var') {
+                from("$projectDir/src/standard/var") {
+                    exclude '**/.gitkeep'
+                    exclude '**/*.log'
+                    exclude 'data/**/*'
+                    includeEmptyDirs true
+                }
+            }
+            into ('web') {
+                from("$projectDir/../simple-authentication-app/build/min") {
+                    include "**/*"
+                }
+            }
+        }
+    }
+}
+
+// ======================================
+// Configure Eclipse Project Dependencies
+// ======================================
+eclipse {
+    project {
+        referencedProjects 'simple-authentication-server'
+    }
+}
