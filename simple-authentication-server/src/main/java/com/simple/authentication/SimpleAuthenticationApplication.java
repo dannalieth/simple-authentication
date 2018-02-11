@@ -1,5 +1,6 @@
 package com.simple.authentication;
 
+import com.simple.authentication.Resource.HelloResource;
 import io.dropwizard.Application;
 import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
@@ -23,5 +24,6 @@ public final class SimpleAuthenticationApplication extends Application<SimpleAut
     @Override
     public void run(final SimpleAuthenticationConfiguration configuration, final Environment environment) {
         //DatabaseBackend databaseBackend = configuration.getDatabaseBackend(environment);
+        environment.jersey().register(new HelloResource());
     }
 }
