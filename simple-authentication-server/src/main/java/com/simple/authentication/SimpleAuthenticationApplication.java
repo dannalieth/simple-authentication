@@ -1,11 +1,9 @@
 package com.simple.authentication;
 
-import com.simple.authentication.Resource.HelloResource;
+import com.simple.authentication.resource.HelloResource;
 import io.dropwizard.Application;
-import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import com.simple.authentication.backend.DatabaseBackend;
 
 /**
  * Main entry point to the simple-authentication API server.
@@ -23,7 +21,6 @@ public final class SimpleAuthenticationApplication extends Application<SimpleAut
 
     @Override
     public void run(final SimpleAuthenticationConfiguration configuration, final Environment environment) {
-        //DatabaseBackend databaseBackend = configuration.getDatabaseBackend(environment);
         environment.jersey().register(new HelloResource());
     }
 }

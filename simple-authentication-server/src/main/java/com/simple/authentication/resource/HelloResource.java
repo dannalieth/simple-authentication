@@ -1,4 +1,4 @@
-package com.simple.authentication.Resource;
+package com.simple.authentication.resource;
 
 import com.simple.authentication.service.HelloService;
 
