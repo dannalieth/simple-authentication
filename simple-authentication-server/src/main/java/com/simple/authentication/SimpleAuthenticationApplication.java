@@ -4,6 +4,7 @@ import com.simple.authentication.authenticator.SimpleAuthenticator;
 import com.simple.authentication.authenticator.SimpleAuthorizer;
 import com.simple.authentication.authenticator.User;
 import com.simple.authentication.resource.HelloResource;
+import com.simple.authentication.resource.OpenResource;
 import io.dropwizard.Application;
 import io.dropwizard.auth.AuthDynamicFeature;
 import io.dropwizard.auth.AuthValueFactoryProvider;
@@ -39,5 +40,6 @@ public final class SimpleAuthenticationApplication extends Application<SimpleAut
         environment.jersey().register(RolesAllowedDynamicFeature.class);
         environment.jersey().register(new AuthValueFactoryProvider.Binder<>(User.class));
         environment.jersey().register(new HelloResource());
+        environment.jersey().register(new OpenResource());
     }
 }
