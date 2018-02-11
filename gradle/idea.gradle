@@ -13,7 +13,7 @@ idea.workspace.iws.withXml { provider ->
                 new Node(null, 'extension', [name: 'coverage', enabled: 'false', merge: 'false', runner: 'idea']),
                 new Node(null, 'option', [name: 'MAIN_CLASS_NAME', value: 'com.simple.authentication.SimpleAuthenticationApplication']),
                 new Node(null, 'option', [name: 'VM_PARAMETERS', value: '']),
-                new Node(null, 'option', [name: 'PROGRAM_PARAMETERS', value: 'server ../dev/var/conf/server.yml']),
+                new Node(null, 'option', [name: 'PROGRAM_PARAMETERS', value: 'server ../standard/var/conf/server.yml']),
                 new Node(null, 'option', [name: 'WORKING_DIRECTORY', value: 'file://$PROJECT_DIR$/simple-authentication-distribution/src/standard']),
                 new Node(null, 'option', [name: 'ALTERNATIVE_JRE_PATH_ENABLED', value: 'false']),
                 new Node(null, 'option', [name: 'ALTERNATIVE_JRE_PATH', value: '']),

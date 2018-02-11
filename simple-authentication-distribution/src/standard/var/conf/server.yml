@@ -14,8 +14,6 @@ database:
 # See for details: https://dropwizard.github.io/dropwizard/manual/configuration.html#servers
 server:
   applicationConnectors:
-    - type: http
-      port: 8000
     - type: https
       port: 8443
       excludedProtocols: [SSLv3]
