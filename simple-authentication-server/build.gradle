@@ -9,6 +9,7 @@ apply plugin: 'java'
 // ============
 dependencies {
     compile "io.dropwizard:dropwizard-core:$dropwizardVersion"
+    compile "io.dropwizard:dropwizard-auth:$dropwizardVersion"
     compile "io.dropwizard:dropwizard-jdbi:$dropwizardVersion"
     compile "org.postgresql:postgresql:$postgresqlVersion"
     compile "commons-codec:commons-codec:$commonsCodecVersion"
